@@ -14,21 +14,28 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Project Summary
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+This application is bringing transparency to the employee market by providing lesser known data points about Layoffs occurring worldwide since 2019.
 
-## Learn More
+Our future goals include using data as an overlay on maps, cross reference COVID restrictions by country/city, and also tying data to Gross GDP. We seek to uncover any predictors of layoffs and the scale of those causes effects on layoff severity.
 
-To learn more about Next.js, take a look at the following resources:
+We chose NextJS for its performance and built in API layer to quickly iterate on future tasks while remaining frontend heavy and TypeScript first.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Roadmap
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+In the future we'd like to see the following features implemented:
 
-## Deploy on Vercel
+- Fix data mapping helper to correctly add data based on type
+  - For example: Company funding stage counts number of companies but displays "Total Laid Off Employees"
+- Create chart mapping component that can generate different charts based on data type that can be easier to interpret than a bar graph
+- Ability to share data views with URL params
+- Automation and unit testing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Production Readiness
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+In order to go to production our app needs the following checks in place:
+
+1. Data reliability check (Monte Carlo)
+2. Automation testing (Cypress.js)
+3. Automated deployment pipeline (Zeit)
